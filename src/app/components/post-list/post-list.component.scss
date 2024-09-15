@@ -1,0 +1,42 @@
+h2 {
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+ul {
+    width: 1200px;
+    display: flex;
+    justify-content: justify;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin:auto;
+}
+
+.list {
+
+}
+
+.list p a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: Center;
+    gap: 15px;
+    width: 150px;  
+    height: fit-content;
+    padding: 10px ;
+    background: lightcoral;
+    border-radius: 8px;
+    margin: 5px 0;
+    transition: .2s ease;
+}
+
+.list p a:hover {
+    scale: .99;
+}
+
+.list p a:active {
+    opacity: .85;
+}

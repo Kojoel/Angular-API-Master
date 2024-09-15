@@ -1,1 +1,6 @@
-<p>post-list works!</p>
+<h2>Posts</h2>
+<ul>
+  <li class="list" *ngFor="let post of posts">
+    <p><a [routerLink]="['/post', post.id]">{{ post.id }} {{ post.title}}</a></p>
+  </li>
+</ul>
