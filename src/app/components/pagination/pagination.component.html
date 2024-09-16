@@ -1,0 +1,15 @@
+<nav>
+    <ul class="pagination">
+      <li [class.disabled]="currentPage === 1">
+        <a (click)="onPageChange(currentPage - 1)">Previous</a>
+      </li>
+      @for (page of getPages(); track page) {
+        <li [class.active]="page === currentPage">
+          <a (click)="onPageChange(page)">{{ page }}</a>
+        </li>
+      }
+      <li [class.disabled]="currentPage === totalPages">
+        <a (click)="onPageChange(currentPage + 1)">Next</a>
+      </li>
+    </ul>
+  </nav>
