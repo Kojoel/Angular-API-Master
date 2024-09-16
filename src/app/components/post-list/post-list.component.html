@@ -1,0 +1,19 @@
+<section class="heading-button-container">
+  <h2>Posts</h2>
+  <a id="create-new-post-link" [routerLink]="['/posts/create']">Create New Post</a>
+</section>
+    @for (post of posts; track post.id) {
+      <div>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.body }}</p>
+        <a [routerLink]="['/post', post.id]">View Details</a>
+      </div>
+    } @empty {
+      <p>No posts available.</p>
+    }
+    <app-pagination 
+      [currentPage]="currentPage" 
+      [totalPages]="totalPages" 
+      (pageChange)="onPageChange($event)">
+    </app-pagination>
+    

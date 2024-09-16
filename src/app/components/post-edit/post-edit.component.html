@@ -1,0 +1,16 @@
+  <h2>Edit Post</h2>
+    @if (post) {
+      <form (ngSubmit)="onSubmit()">
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" [(ngModel)]="post.title" required>
+        </div>
+        <div>
+          <label for="body">Body:</label>
+          <textarea id="body" name="body" [(ngModel)]="post.body" required></textarea>
+        </div>
+        <button type="submit">Update Post</button>
+      </form>
+    } @else {
+      <p>Post not found.</p>
+    }

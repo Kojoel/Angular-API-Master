@@ -1,0 +1,21 @@
+@if (postWithComments$ | async; as postWithComments) {
+    <button (click)="editPost()">Edit Post</button>
+    <button (click)="gotoPosts()">Got to Posts</button>
+    <h2>{{ postWithComments.post.title }}</h2>
+    <p>{{ postWithComments.post.body }}</p>
+    <h3>Comments</h3>
+    @if (postWithComments.comments.length) {
+      <ul>
+        @for (comment of postWithComments.comments; track comment.id) {
+          <li>
+            <strong>{{ comment.name }}</strong> ({{ comment.email }})
+            <p>{{ comment.body }}</p>
+          </li>
+        }
+      </ul>
+    } @else {
+      <p>No comments yet.</p>
+    }
+  } @else {
+    <p>Loading post and comments...</p>
+  }
