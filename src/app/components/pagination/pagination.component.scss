@@ -23,3 +23,33 @@
       margin: 0 10px;
     }
 }
+
+.prev-btn, .next-btn{
+  display: inline-block;
+  width: 80px;
+  padding: 5px 10px;
+  background: #007bff;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: .15s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: #1385ff;
+}
+
+.prev-btn:active, .prev-btn:active {
+  opacity: .85;
+}
+
+.current-page {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.current-page:hover {
+  background: lightblue;
+}
